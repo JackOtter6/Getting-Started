@@ -10,7 +10,8 @@ def index(request):
 
 def about(request):
     return render(request, "about.html")
-
+def hangman(request):
+    return render(request, "hangman.html")
 def db(request):
 
     greeting = Greeting()

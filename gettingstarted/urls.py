@@ -18,5 +18,6 @@ urlpatterns = [
     path("", hello.views.index, name="index"),
     path("db/", hello.views.db, name="db"),
     path("admin/", admin.site.urls),
-    path("about/", hello.views.about, name="about")
+    path("about/", hello.views.about, name="about"),
+    path("hangman/", hello.views.hangman, name="hangman"),
 ]
