@@ -12,6 +12,10 @@ def about(request):
     return render(request, "about.html")
 def hangman(request):
     return render(request, "hangman.html")
+def scrabble(request):
+    return render(request, "scrabble.html")
+def caesar_cipher(request):
+    return render(request, "caesar_cipher.html")
 def db(request):
 
     greeting = Greeting()
