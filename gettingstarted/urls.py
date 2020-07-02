@@ -22,4 +22,5 @@ urlpatterns = [
     path("hangman/", hello.views.hangman, name="hangman"),
     path("scrabble/", hello.views.scrabble, name="scrabble"),
     path("caesar_cipher/", hello.views.caesar_cipher, name="caesar_cipher"),
+    path("madlibs/", hello.views.madlibs, name="madlibs"),
 ]
