@@ -3,5 +3,13 @@
 
 {% block content %}
 <h1 style="text-align: center; font-size: 80px;">Hangman</h1>
-<p style="text-indent: 25px">This is the game hangman.</p>
+<h2 style="text-indent: 25px">This is the game Hangman.</h2>
+<p style="text-indent: 50px;"> Here is how you play:</p>
+<p style="text-indent: 75px;">· The game will tell you the number of guesses you have left, the leters you have left to guess
+    , the number of warnings you have left, the word with underscores as the letters you havn't guessed yet.</p>
+<p style="text-indent: 75px;">· It should then ask you for a letter.</p>
+<p style="text-indent: 150px;">· If you put in a letter, then it will tell you weather it is right or wrong.</p>
+<p style="text-indent: 150px;">· If it is right, then you will get that letter in the word.</p>
+<p style="text-indent: 150px;">· If it is wrong, then you will lose a guess. If you have no guesses left, then you will lose a warning.</p>
+<p style="text-indent: 150px;">· If you put in a character that is not a letter, you will lose a warning.</p>
 {% endblock %}
