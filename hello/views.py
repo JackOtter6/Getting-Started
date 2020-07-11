@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from .models import Greeting
+from .models import Greeting, Game
 
 # Create your views here.
 def index(request):
@@ -11,7 +11,8 @@ def index(request):
 def about(request):
     return render(request, "about.html")
 def hangman(request):
-    return render(request, "hangman.html")
+    game = Game.objects.get(name="Hangman")
+    return render(request, "hangman.html", {"game":game})
 def scrabble(request):
     return render(request, "scrabble.html")
 def caesar_cipher(request):

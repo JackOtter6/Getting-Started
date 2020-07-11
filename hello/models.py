@@ -8,3 +8,4 @@ class Game(models.Model):
     name = models.CharField(max_length=225)
     information = models.TextField()
     link = models.URLField()
+    program = models.TextField(default="Coming Soon")
