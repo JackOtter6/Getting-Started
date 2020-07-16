@@ -12,13 +12,16 @@ def about(request):
     return render(request, "about.html")
 def hangman(request):
     game = Game.objects.get(name="Hangman")
-    return render(request, "hangman.html", {"game":game})
+    return render(request, "GameTemplate.html", {"game":game})
 def scrabble(request):
-    return render(request, "scrabble.html")
+    game = Game.objects.get(name="Scrabble")
+    return render(request, "GameTemplate.html", {"game":game})
 def caesar_cipher(request):
-    return render(request, "caesar_cipher.html")
+    game = Game.objects.get(name="Caesar Cipher")
+    return render(request, "GameTemplate.html", {"game":game})
 def madlibs(request):
-    return render(request, "madlibs.html")
+    game = Game.objects.get(name="MadLibs")
+    return render(request, "GameTemplate.html", {"game":game})
 def db(request):
 
     greeting = Greeting()
