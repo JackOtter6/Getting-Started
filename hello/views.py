@@ -12,7 +12,8 @@ def about(request):
     return render(request, "about.html")
 def hangman(request):
     game = Game.objects.get(name="Hangman")
-    return render(request, "GameTemplate.html", {"game":game})
+    steps = game.step_set.all()
+    return render(request, "GameTemplate.html", {"game":game, "steps":steps})
 def scrabble(request):
     game = Game.objects.get(name="Scrabble")
     return render(request, "GameTemplate.html", {"game":game})

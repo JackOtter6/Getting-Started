@@ -5,6 +5,13 @@
 <h1 style="text-align: center;"> {{game.name}} </h1>
 <p style="text-align: center;"> <a type="button" class="btn btn-lg btn-primary" href={{game.link}}><span class="glyphicon glyphicon-download"></span> Click for instant download</a> </p>
 <p style="text-indent: 75px;"> {{game.information | linebreaksbr}} </p>
+<p>
+    <ol>
+        {% for step in steps %}
+        <li> {{step.instruction}}</li>
+        {% endfor %}
+    </ol>
+</p>
 <h3 style="padding-left: 10%;"> Raw code: </h3>
 <div class="gameProgram"> <p class = "gameProgram"> {{game.program | linebreaks}} </p> </div>
 {% endblock %}

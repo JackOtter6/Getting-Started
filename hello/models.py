@@ -9,3 +9,7 @@ class Game(models.Model):
     information = models.TextField()
     link = models.URLField()
     program = models.TextField(default="Paste a program")
+class Step(models.Model):
+    order = models.IntegerField()
+    instruction = models.TextField()
+    game = models.ForeignKey(Game, on_delete = models.CASCADE)
